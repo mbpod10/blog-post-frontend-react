@@ -1,12 +1,13 @@
 import PostList from "./components/PostList"
 import MainHeader from "./components/Header";
+import PostProvider from "./store/PostProvider";
 
 const App = () => {
   return (
-    <div>
+    <PostProvider>
       <MainHeader />
       <PostList />
-    </div>
+    </PostProvider>
   );
 }
 
