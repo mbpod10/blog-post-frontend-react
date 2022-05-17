@@ -1,22 +1,25 @@
 import React from 'react'
-import { Container, Header, Segment } from 'semantic-ui-react'
+import { Container, Header, Segment, Image } from 'semantic-ui-react'
 import classes from "../styles/Post.module.css"
 import PostTag from "./PostTag"
+import PostComment from './PostComment'
 
-const ContainerExampleText = (props) => (
-  <Container text className={classes['post-feed']}>
-    <Header as='h2'>{props.post.title}</Header>
+const Post = (props) => (
+  <Container text className={classes['post-feed']} >
+    <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
+    <span>@{props.post.username}</span>
+    <Header as='h2' inverted color="green">{props.post.title}</Header>
+    <p>{props.post.body}</p>
     <Segment.Group>
       <Segment.Group horizontal>
         <Segment>Top</Segment>
         <Segment>Middle</Segment>
         <Segment>Bottom</Segment>
       </Segment.Group>
-      <PostTag tags={props.post.tags} key={props.post.id} postKey={props.post.id} />
+      {props.post.tags.length > 0 && <PostTag tags={props.post.tags} key={props.post.id} postKey={props.post.id} />}
     </Segment.Group>
-    <p>{props.post.body}</p>
-
+    {props.post.comments_count > 0 && <PostComment comments={props.post.comments} />}
   </Container>
 )
 
-export default ContainerExampleText
+export default Post

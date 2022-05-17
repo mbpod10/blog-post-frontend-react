@@ -1,13 +1,10 @@
-
-
-
 import PostList from "./components/PostList"
-function App() {
+import MainHeader from "./components/Header";
 
-
-
+const App = () => {
   return (
     <div>
+      <MainHeader />
       <PostList />
     </div>
   );

@@ -11,7 +11,6 @@ const PostList = () => {
     const makeAPICall = async () => {
       await axios.get(`http://localhost:4001/posts`)
         .then((response) => {
-          console.log(response.data)
           setPosts(response.data)
         })
         .catch((error) => {
