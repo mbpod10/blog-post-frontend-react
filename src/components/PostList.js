@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import Post from "./Post"
 import PostContext from '../store/post-context';
 import axios from 'axios'

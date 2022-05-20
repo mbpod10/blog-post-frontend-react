@@ -9,14 +9,14 @@ const defaultPostState = {
 
 const dataReducer = (state, action) => {
   if (action.type === "MAKE_API_CALL") {
-    console.log("make")
+
     return {
       ...state,
       postLoading: true
     }
   }
   if (action.type === "SUCCESSFUL_POST_CALL") {
-    console.log("Success")
+
     let newPosts = action.data
     return {
       ...state,

@@ -1,15 +1,15 @@
 import classes from "../styles/Loader.module.css"
 
-const MainLoader = () => {
+const LoaderSpinner = () => {
   return (
     <>
       <div className={classes.loaderDiv}>
         <div className={classes.loader}>
-          <h1>Loading...</h1>
         </div>
       </div>
+      <h1>Loading...</h1>
     </>
   )
 }
 
-export default MainLoader
+export default LoaderSpinner

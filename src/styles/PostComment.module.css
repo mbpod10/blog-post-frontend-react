@@ -1,0 +1,12 @@
+.username {
+  color: blue !important
+}
+
+.showComments {
+  cursor: pointer;
+}
+
+.showComments:hover {
+  color: red;
+  font-size: 20px !important;
+}

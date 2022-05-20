@@ -6,9 +6,9 @@ import PostComment from './PostComment'
 
 const Post = (props) => (
   <Container text className={classes['post-feed']} >
-    <Image src='https://react.semantic-ui.com/images/wireframe/square-image.png' avatar />
-    <span className={classes.username}>@{props.post.username}</span>
     <Header as='h2' color="orange">{props.post.title}</Header>
+    <Image src={props.post.avatar} avatar />
+    <span className={classes.username}>@{props.post.username}</span> <hr />
     <p>{props.post.body}</p>
     <Segment.Group>
       <Segment.Group horizontal>
